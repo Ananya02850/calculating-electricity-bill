@@ -1,0 +1,39 @@
+declare
+a number(5);
+units number(6);
+rate1 number(2);
+rate2 number(2);
+rate3 number(2);
+rate4 number(2);
+z number(9);
+type1 varchar2(5);
+
+begin
+units :=101;
+rate1:=5;
+rate2:=7;
+rate3:=7.50;
+rate4:=8;
+z :=0;
+
+if units<=100 then
+
+z := units*rate1;
+dbms_output.put_line(z);
+
+elsif units between 101 and 150 then
+
+z := units*rate2;
+dbms_output.put_line(z);
+
+elsif units between 151 and 300 then
+
+z := units*rate3;
+dbms_output.put_line(z);
+
+else
+z := units*rate4;
+dbms_output.put_line(z);
+end if;
+end;
+/
